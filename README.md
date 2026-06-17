@@ -26,7 +26,7 @@ When a browser gets an HTML file, it starts reading the code line by line. This 
 Tokenization
 Before creating the DOM Tree the browser breaks the HTML code into pieces called tokens.
 For example:
-<h1>Hello</h1>
+```<h1>Hello</h1>```
 
 The browser finds:
 * The opening tag: h1
@@ -76,7 +76,7 @@ DOM Tree + CSSOM Tree
 Attributes vs Properties
 Attributes are defined inside HTML.
 Example:
-<input value="Task">
+```<input value="Task">```
 
 
 Property:
