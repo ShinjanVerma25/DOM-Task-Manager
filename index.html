@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="light">
+
+    <!--HEADER SECTION-->
+    <header>
+        <h1>Task Manager Application</h1>
+        <button id="themeToggle">Dark Mode</button>
+    </header>
+
+    <!--TASK FORM SECTION-->
+    <section class="task-form-section">
+        <h2>Add New Task</h2>
+        <form id="taskForm">
+            <input type="text" id="taskTitle" placeholder="Enter task title" required>
+            <select id="taskCategory">
+                <option value="Personal">Personal</option>
+                <option value="Study">Study</option>
+                <option value="Work">Work</option>
+                <option value="Other">Other</option>
+            </select>
+            <button type="submit">Add Task</button>
+        </form>
+    </section>
+
+    <!--UTILITY SECTION-->
+    <section class="utility-section">
+        <input type="text" id="searchTask" placeholder="Search Task...">
+        <div class="counter-box">
+            <p>Completed Tasks: <span id="completedCount">0</span></p>
+            <p>Pending Tasks: <span id="pendingCount">0</span></p>
+        </div>
+    <button id="clearAllBtn">Clear All Tasks</button>
+    </section>
+
+    <!--TASK CONTAINER-->
+    <section>
+        <h2>Your Tasks</h2>
+        <div id="taskContainer">
+            <!--Tasks will be added here dynamically-->
+        </div>
+    </section>
+
+    <!--EVENT PROPAGATION SECTION-->
+    <section class="propagation-section">
+        <h2>Event Propagation Demo</h2>
+        <p>Open browser console and click the button below to see Event Bubbling and Capturing order.</p>
+        <div id="grandparent">
+            Grandparent
+            <div id="parent">
+                Parent
+                <button id="childButton">Child Button</button>
+            </div>
+        </div>
+    </section>
+    
+    <!--BROWSER RENDERING PIPELINE SECTION-->
+    <section class="pipeline-section">
+        <h2>Browser Rendering Pipeline</h2>
+        <div class="pipeline-container">
+            <div class="pipeline-box">
+                HTML
+            </div>
+            <div class="arrow">
+                ↓
+            </div>
+            <div class="pipeline-box">
+                Parsing
+            </div>
+            <div class="arrow">
+                ↓
+            </div>
+            <div class="pipeline-box">
+                Tokenization
+            </div>
+            <div class="arrow">
+                ↓
+            </div>
+            <div class="pipeline-box">
+                DOM Tree
+            </div>
+            <div class="arrow">
+                ↓
+            </div>
+            <div class="pipeline-box">
+                CSS
+            </div>
+            <div class="arrow">
+                ↓
+            </div>
+            <div class="pipeline-box">
+                CSSOM Tree
+            </div>
+            <div class="arrow">
+                ↓
+            </div>
+            <div class="pipeline-box">
+                DOM Tree + CSSOM Tree
+            </div>
+            <div class="arrow">
+                ↓
+            </div>
+            <div class="pipeline-box">
+                Render Tree
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
